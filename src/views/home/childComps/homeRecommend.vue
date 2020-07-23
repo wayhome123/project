@@ -1,7 +1,11 @@
 <template>
-  <div>
+  <div class="recommend-wrapper">
     <div class="recommend">
-      <div v-for="item in recommend" :key="item" class="recommendList">
+      <div
+        v-for="(item, index) in recommend"
+        :key="index"
+        class="recommendList"
+      >
         <a :href="item.link">
           <img :src="item.image" alt="item.title" />
           <h4>{{ item.title }}</h4>
@@ -24,6 +28,10 @@ export default {
 </script>
 
 <style scoped>
+.recommend-wrapper {
+  width: 100%;
+}
+
 .recommend {
   padding: 15px 0 20px 0;
   width: 100%;

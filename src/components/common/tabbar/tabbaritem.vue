@@ -21,6 +21,7 @@ export default {
   display: flex;
   flex-flow: column;
   justify-content: space-evenly;
+  align-items: center;
   text-align: center;
   font-size: 16px;
   color: rgb(0, 0, 0);

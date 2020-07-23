@@ -22,7 +22,7 @@ export default {
   },
   data() {
     return {
-      num: -1
+      num: 0
     };
   },
   components: {},
@@ -31,6 +31,7 @@ export default {
   methods: {
     isActive(index) {
       this.num = index;
+      this.$emit("tabClick", index);
     }
   }
 };
@@ -44,6 +45,7 @@ export default {
   position: sticky;
   top: 44px;
   height: 30px;
+  line-height: 30px;
   background-color: white;
 }
 

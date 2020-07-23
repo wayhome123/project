@@ -5,7 +5,7 @@
         <tabbaritem v-for="(item, index) in itemArray" :key="index" v-cloak>
           <router-link :to="item.router" replace>
             <h1 :class="item.icon"></h1>
-            <h1>{{ item.name }}</h1>
+            <h1 class="font clearfix">{{ item.name }}</h1>
           </router-link>
         </tabbaritem>
       </tabbar>
@@ -43,14 +43,25 @@ export default {
 /*@import "../../assets/css/reset.css";*/
 @import "../../../node_modules/font-awesome/css/font-awesome.min.css";
 
+.clearfix {
+  display: table;
+  content: "";
+  clear: both;
+}
+
 a {
   text-decoration: none;
   color: #000000;
 }
 
-h1 {
-  margin: 0;
-  padding: 0;
+.tabbar-list h1 {
+  font-size: 25px;
+}
+
+h1.font {
+  font-size: 12px;
+  margin: 0px 0;
+  padding-top: 3px;
 }
 
 .router-link-active {
