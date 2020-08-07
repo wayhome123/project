@@ -1,8 +1,8 @@
 <template>
-  <div class="homeGoodsList">
+  <div class="homeGoodsList" @click="goodsClick">
     <div class="list">
       <div class="img-wrapper">
-        <img :src="goodList.show.img" alt="" />
+        <img v-lazy="showImage" alt="" @load="imgLoad" />
       </div>
       <p>{{ goodList.title }}</p>
       <div>
@@ -31,12 +31,27 @@ export default {
       }
     }
   },
+  computed: {
+    showImage() {
+      return this.goodList.image || this.goodList.show.img;
+    }
+  },
   components: {},
   created() {},
   mounted() {},
   methods: {
     changeStatus() {
       // this.collect = "fa fa-star";
+    },
+    imgLoad() {
+      if (this.$route.path.indexOf("/home") !== -1) {
+        this.$bus.$emit("homeImgLoad");
+      } else if (this.$route.path.indexOf("/detail") !== -1) {
+        this.$bus.$emit("detailImgLoad");
+      }
+    },
+    goodsClick() {
+      this.$router.push("/detail/" + this.goodList.iid);
     }
   }
 };

@@ -7,6 +7,7 @@ const home = () => import("../views/home/home.vue");
 const classify = () => import("../views/classify/classify.vue");
 const car = () => import("../views/car/car.vue");
 const mine = () => import("../views/mine/mine.vue");
+const detail = () => import("../views/detail/detail.vue");
 
 const routes = [
   {
@@ -20,7 +21,8 @@ const routes = [
     path: "/home",
     component: home,
     meta: {
-      name: "首页"
+      name: "首页",
+      keepAlive: true
     }
   },
   {
@@ -43,11 +45,15 @@ const routes = [
     meta: {
       name: "我的"
     }
+  },
+  {
+    path: "/detail/:iid",
+    component: detail
   }
 ];
 
 const router = new VueRouter({
-  mode: "history",
+  // mode: 'history',
   base: process.env.BASE_URL,
   routes
   // linkActiveClass: "active"

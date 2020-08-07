@@ -5,10 +5,19 @@ import store from "./store";
 import VueAwesomeSwiper from "vue-awesome-swiper";
 
 import "swiper/swiper-bundle.css";
+import toast from "components/common/toast/toast";
+import fastClick from "fastclick";
+import vueLazyLoad from "vue-lazyload";
 
-Vue.use(VueAwesomeSwiper /* { default options with global component } */);
+Vue.use(VueAwesomeSwiper);
+Vue.use(toast);
+Vue.use(vueLazyLoad);
 
 Vue.config.productionTip = false;
+
+Vue.prototype.$bus = new Vue();
+
+fastClick.attach(document.body);
 
 new Vue({
   router,

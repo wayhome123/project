@@ -1,5 +1,11 @@
-@import "./normalize.css";
-@import "./reset.css";
+@import './normalize.css';
+@import './reset.css';
 
-/*body{  font-size:18px;*/
-/*}*/
+:root {
+  --color-text: #666;
+  --color-high-text: #ff5777;
+  --color-tint: #ff8198;
+  --color-background: #fff;
+  --font-size: 14px;
+  --line-height: 1.5;
+}

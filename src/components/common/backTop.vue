@@ -20,7 +20,7 @@ export default {
 @import "../../../node_modules/font-awesome/css/font-awesome.min.css";
 
 .backTop {
-  opacity: 0.9;
+  opacity: 0.85;
   text-align: center;
   line-height: 40px;
   width: 40px;

@@ -42,8 +42,8 @@ export default {
   justify-content: space-around;
   font-size: 16px;
   padding: 5px 0;
-  position: sticky;
-  top: 44px;
+  /* position: sticky;
+  top: 44px; */
   height: 30px;
   line-height: 30px;
   background-color: white;

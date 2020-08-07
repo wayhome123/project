@@ -23,7 +23,7 @@ export default {
   display: flex;
   line-height: 44px;
   height: 44px;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
 }
 
 .left,
